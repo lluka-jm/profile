@@ -1,0 +1,147 @@
+/* Apply consistent box model sizing to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;}
+
+
+/* Readability defaults */
+body {
+    margin: 1rem; /* Removes default spacing around page */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* Clean system fonts */
+    line-height: 1.6; /* Improves reading comfort */
+    color: #111; /* Dark text for strong contrast */
+    background: #fff; /* White background for clarity */}
+
+/* Skip link: appears when keyboard users press Tab (accessibility best practice) */
+.skip-link {
+    position: absolute;
+    left: -999px; /* Hide off-screen until focused */
+    top: 0;
+    padding: 0.75rem 1rem;
+    background: #5f5aeb;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-decoration: none;}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    left: 1rem;
+    top: 1rem;
+    z-index: 9999;}
+
+/*accessible links*/
+a {
+    color: #5f5aeb;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;}
+
+nav a {
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.4rem;}
+
+nav a:hover {
+    background: #5f5aeb;
+    color: #fafafa;} /*colour change when over link */
+
+nav a:hover {
+    background: #5f5aeb;
+    color: #fafafa;} /*colour change when over link */
+
+/* Visible keyboard focus indicator */
+:focus-visible {    
+    outline: 3px solid #5f5aeb;
+    outline-offset: 3px;}
+
+
+/* Text styling and visual hierachy */
+h1, h2, h3 {
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+    color: #333;}
+
+h1 {font-size: 2.5rem;}
+
+h2 {font-size: 1.5rem;
+    margin-top: 0.5rem; /* Adds space before new sections */}
+
+h3 {font-size: 1.2rem;
+    margin-top: 0.5rem;}
+
+h4 {font-size: 1rem;
+    margin-top: 0.75rem;
+    color: fafafa;}
+
+p {margin: 0 0 1rem 0;}
+
+main {
+    max-width: 800px; /* Prevents long, hard-to-read lines */
+    margin: 0 auto; /* Centres content horizontally */
+    padding: 1.5rem; /* Adds breathing room inside container */}
+
+article {
+    border: 1px solid #e6e6e6;
+    border-radius: 0.75rem; /* Soft rounded corners */
+    padding: 1rem 1.75rem; /* Internal spacing */
+    margin: 1.5rem 0 0 auto; /* Space between projects */
+    background: #fafafa; /* Light background contrast */}
+
+.question {
+  font-weight: bold;
+  margin: 1rem 0 0.5rem ;
+}
+
+.answers {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 0.75rem;
+  padding: 1rem;
+
+}
+
+.answers label {
+  display: block;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; /* Clean system fonts */
+  color: #111;
+}
+
+
+#submit {
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #5f5aeb;
+  color: #fafafa;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: fit-content; 
+}
+
+#submit:hover { /*colour change when over link */
+    color: #fafafa;
+    background: #5f5aebc2;;
+}
+
+footer {
+    border-top: 1px solid #e6e6e6;
+    padding: 1.5rem;
+    color: #333;
+}
+
+/* Reduce padding and stack navigation for narrow screen */
+@media (max-width: 600px) {
+    header,
+    footer {padding: 1rem;}
+    main {padding: 1rem;}
+    h1 {font-size: 1.6rem;}
+    nav ul {gap: 0.5rem;}
+    nav a {padding: 0.35rem 0.5rem;}
+}
