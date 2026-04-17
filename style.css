@@ -218,11 +218,10 @@ footer {
 
 
 /* Reduce padding and stack navigation for narrow screen */
-@media (max-width: 600px) {
-    header,
-    footer {padding: 1rem;}
+@media (max-width: 600px) 
+    {header, footer {padding: 1rem;}
     main {padding: 1rem;}
     h1 {font-size: 1.6rem;}
-    nav ul {gap: 0.5rem;
-        }
-    nav a {padding: 0.35rem 0.5rem;}}
+    nav ul {gap: 0.5rem;}
+    nav a {padding: 0.35rem 0.5rem;}
+    #about, article {padding: 0.5rem 1rem;}}
